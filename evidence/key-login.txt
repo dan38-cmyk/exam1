@@ -1,0 +1,2 @@
+dan38
+ubuntu-s-1vcpu-512mb-10gb-sfo2
