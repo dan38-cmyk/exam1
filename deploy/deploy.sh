@@ -32,7 +32,7 @@ printf 'IMAGE_REF=%s\nWEB_PORT=%s\n' "$image" "$port" > release.env
 docker compose --env-file release.env \
   -p "exam1-$environment" -f compose.yml up -d
 
-curl --retry 12 --retry-connrefused --retry-delay 2 \
+curl --retry 12 --retry-all-errors --retry-delay 2 \
   --max-time 10 -fsS "http://127.0.0.1:$port/" > /dev/null
 
 echo "Deployed $image to $environment"
