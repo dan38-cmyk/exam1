@@ -1,0 +1,6 @@
+services:
+  website:
+    image: ${IMAGE_REF:?IMAGE_REF must be set}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${WEB_PORT:?WEB_PORT must be set}:80"

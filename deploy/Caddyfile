@@ -1,0 +1,7 @@
+exam1.duckdns.org {
+    reverse_proxy 127.0.0.1:8080
+}
+
+qa.exam1.duckdns.org {
+    reverse_proxy 127.0.0.1:8081
+}
